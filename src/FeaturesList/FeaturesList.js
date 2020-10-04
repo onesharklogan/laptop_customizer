@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import slugify from 'slugify';
 import FeatureItem from '../FeatureItem/FeatureItem';
 
 function FeaturesList({ features, onUpdateFeature, selected }) {
