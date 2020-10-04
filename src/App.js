@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar/Navbar';
-
+import FeaturesList from './FeaturesList/FeaturesList';
 import SummaryPrice from './SummaryPrice/SummaryPrice';
 import USCurrencyFormat from './USCurrencyFormat';
 // Normalizes string as a slug - a string that is safe to use
@@ -96,10 +96,15 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <main>
-          <form className="main__form">
+          <FeaturesList
+            features={this.props.features}
+            selected={this.state.selected}
+            onUpdateFeature={this.updateFeature}
+          />
+          {/* <form className="main__form">
             <h2>Customize your laptop</h2>
             {features}
-          </form>
+          </form> */}
           <section className="main__summary">
             <h2>Your cart</h2>
             {summary}
